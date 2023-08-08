@@ -7,6 +7,41 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.header__link:hover {
+    color: orange;
+}
+
+.header__link:active {
+    color: gray
+}
+
+.header__link:first-child {
+    text-decoration: underline;
+}
+
+.header__link:last-child {
+    border-right: 1px solid orange;
+    padding-right: 32px;
+}
+
+.header__link:nth-child(2n) {
+    color: gray;
+}
+
+
+/* .list__item__new::after {
+    content: " NEW!";
+    color: red;
+} */
+
+.list__item:hover::after {
+    content: " <<";
+}
+
+.about__content:hover .about__text {
+    color: blue;
+}
+
 
 /*
 .container {
@@ -33,6 +68,7 @@ I can put all in the container or*/
     font-size: 20px;
     line-height: 23px;
     color: #FFF;
+    text-decoration: none;
 }
 
 .top {
@@ -146,4 +182,86 @@ I can put all in the container or*/
 .center {
     padding-left: calc(50% - 580px);
     padding-right: calc(50% - 580px);
+}
+
+.drive {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.drive:hover .car {
+    margin-left: 1000px;
+}
+
+.car {
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    transition: margin 3s;
+}
+
+.car-1 {
+    transition-timing-function: ease;
+}
+
+.car-2 {
+    transition-timing-function: ease-in;
+}
+
+.car-3 {
+    transition-timing-function: ease-out;
+}
+
+.car-4 {
+    transition-timing-function: ease-in-out;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+}
+
+.board__item {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    transition: transform 1s;
+}
+
+.board__item__1:hover {
+    transform: translate(200px, -100px) scale(2);
+}
+
+.board__item__2:hover {
+    transform: translate(00px, -100px) scale(2);
+}
+
+.board__item__3:hover {
+    transform: translate(-200px, -100px) scale(2);
+}
+
+.hexagon {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    position: relative;
+    transition: 3s;
+}
+
+.hexagon__part {
+    width: 150px;
+    height: 86px;
+    background-color: green;
+    position: absolute;
+}
+
+.hexagon__part-1 {
+    transform: rotate(60deg);
+}
+
+.hexagon__part-3 {
+    transform: rotate(-60deg);
 }
