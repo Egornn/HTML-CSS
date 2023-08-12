@@ -12,6 +12,11 @@ img {
     max-width: 100%;
 }
 
+.rectangle svg {
+    width: 12px;
+    height: 93px;
+}
+
 .text__overlay {
     color: #FFF;
     text-align: center;
@@ -64,7 +69,7 @@ img {
     align-items: center;
     padding-left: calc(50% - 800px);
     padding-right: calc(50% - 800px);
-    gap: 3.9375 vw;
+    gap: 3.9375vw;
 }
 
 .advert {
@@ -360,10 +365,11 @@ p {
     gap: 13.9375vw;
     justify-content: center;
     height: 448px;
-    background: url(img/Background.png), lightgray 0px -169px / 100% 246.875% no-repeat;
+    background: url(img/Background.png), lightgray 0px -169px / 100% 246.875%;
     background-size: auto 100%;
     background-clip: content-box;
     z-index: 1;
+    background-repeat: no-repeat;
 }
 
 .subscribe__box::before {
@@ -539,6 +545,15 @@ button:hover {
 
 .footer__logo-:hover {
     background-color: #F16D7F;
+}
+
+.social_logo {
+    fill: black;
+}
+
+.footer__logo-:hover .social_logo {
+    fill: white;
+    color: white;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -721,9 +736,6 @@ button:hover {
         margin-top: 24px;
         margin-bottom: 24px;
     }
-    .main_adv {
-        padding-right: 15vw;
-    }
     .features {
         display: flex;
         flex-direction: column;
@@ -780,5 +792,58 @@ button:hover {
         width: 96px;
         height: 96px;
         margin: 64px auto 30px;
+    }
+    .subscribe__box {
+        background: none;
+    }
+    .offers__bottom {
+        margin-top: 3.5vw;
+    }
+    .text__overlay {
+        font-size: 12px;
+    }
+    .image_container {
+        overflow: hidden;
+        position: relative;
+    }
+    .image_container img {
+        max-width: none;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 125px;
+        /* Измените это значение на ваше усмотрение */
+    }
+    .mobile_hide {
+        display: none;
+    }
+    .main_adv {
+        justify-content: center;
+        height: 375px;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 0px;
+    }
+    .rectangle {
+        gap: 15px;
+    }
+    .rectangle svg {
+        width: 12px;
+        height: 77px;
+    }
+    .advert {
+        width: 236px;
+        height: 66px;
+        max-width: none;
+    }
+    .title {
+        font-size: 38px;
+    }
+    .text__second {
+        font-size: 20px;
+    }
+    .text__colored {
+        font-size: 20px;
     }
 }
